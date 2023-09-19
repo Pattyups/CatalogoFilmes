@@ -1,0 +1,122 @@
+.header {
+    background-color: var(--beige-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    width: auto;
+    
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.header__logo-image {
+    padding: 0.5em;
+}
+
+.header__logo-title {
+    display: none;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header__logo-title>span {
+    color: var(--gold-color);
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu-item {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.5em;
+    text-decoration: none;
+
+}
+
+.header__menu-item--dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+#checkbox {
+    display: none;
+}
+
+.header__dropdown-menu {
+    display: none;
+    background-color: var(--light-beige-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5em;
+    position: absolute;
+    width: auto;
+    top: 100%;
+}
+
+.header__dropdown-menu-item {
+    padding: 0.5em;
+    white-space: nowrap;
+}
+
+.header__dropdown-menu-item>a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+}
+
+.header__user-item {
+    padding: 0.5em;
+}
+
+.header__user-item--text {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5em;
+}
+
+.header__user-item--text>a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+    .header__logo-title {
+        display: block;
+    }
+
+    .header__menu {
+        gap: 2em;
+    }
+
+    .header__menu-item {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header__user-item--text {
+        display: block;
+    }
+
+    .header__menu-item {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>CineTeca</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="./assets/film.svg" alt="Logo da CineTeca" class="header__logo-image">
+            <a href="/index.html" class="header__logo-title">Cine<span>Teca</span></a>
+        </div>
+        <div class="header__menu">
+            <a href="#" class="header__menu-item">Sobre</a>
+            <div class="header__menu-item header__menu-item--dropdown">
+                Filmes
+                <ul class="header__dropdown-menu">
+                    <li class="header__dropdown-menu-item"><a href="#">Por Gênero</a></li>
+                    <li class="header__dropdown-menu-item"><a href="#">Por Ano</a></li>
+                </ul>
+            </div>
+            <a href="#" class="header__menu-item">Novidades</a>
+        </div>
+        <ul class="header__user">
+            <li class="header__user-item"><img src="./assets/Usuario.svg" alt="Ícone de perfil de usuário"></li>
+            <li class="header__user-item--text"><a href="#">Meu Perfil</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="search">
+            <h2 class="search__title">Olá, Cinéfilo!</h2>
+            <p class="search__text">Explore nosso catálogo digitando o nome do filme desejado.</p>
+            <p class="search__text">Deixe-nos levá-lo a uma jornada cinematográfica.</p>
+            <input type="search" placeholder="Digite o nome do filme aqui..." id="search__field" class="search__input">
+            <div class="search__movie"></div>
+            <div id="modal" class="modal__container">
+                <img src="./assets/close.svg" alt="ícone de fechar" class="modal__close">
+                <div class="modal__content">
+                    <img src="" alt="" class="modal__folder">
+                    <div class="modal__text">
+                        <div class="modal__header">
+                            <h3 class="modal__title"></h3>
+                            <div class="modal__rating">
+                                <span class="modal__star" data-rating="1">★</span>
+                                <span class="modal__star" data-rating="2">★</span>
+                                <span class="modal__star" data-rating="3">★</span>
+                                <span class="modal__star" data-rating="4">★</span>
+                                <span class="modal__star" data-rating="5">★</span>
+                            </div>
+                        </div>
+                        <p class="modal__year"></p>
+                        <p class="modal__categories model__description"></p>
+                        <p class="modal__duration model__description"></p>
+                        <p class="modal__sinopse model__description"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="classics">
+            <h2 class="classics__title">Clássicos que Amamos</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/cidadededeus.jpg" alt="Capa do filme Cidade de Deus">
+                    </div>
+                    <div class="swiper-slide"><img src="./assets/oreileao.jpg" alt="Capa do filme O rei leão"></div>
+                    <div class="swiper-slide"><img src="./assets/poderosochefao.jpg"
+                            alt="Capa do filme O poderoso chefão"></div>
+                    <div class="swiper-slide"><img src="./assets/tropadeelite.jpg" alt="Capa do filme Tropa de elite">
+                    </div>
+                    <div class="swiper-slide"><img src="./assets/truman.jpg" alt="Capa do filme O show de Truman">
+                    </div>
+                    <div class="swiper-slide"><img src="./assets/umsonhodeliberdade.jpg"
+                            alt="Capa do filme Um sonho de liberdade"></div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+        <section class="email">
+            <h2 class="email__title">Fique por Dentro das Novidades do Cinema!</h2>
+            <p class="email__text">Preencha seu e-mail abaixo para se juntar à nossa lista de fãs cinéfilos.</p>
+            <input type="email" placeholder="Cadastre seu e-mail" class="email__input">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2 class="footer__logo">Cine<span>Teca</span></h2>
+        <div class="socialmedia">
+            <img src="./assets/facebook.svg" alt="Logo do facebook" class="socialmedia__image">
+            <img src="./assets/instagram.svg" alt="Logo do Instagram" class="socialmedia__image">
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <!--swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+        });
+    </script>
+</body>
+
+</html>

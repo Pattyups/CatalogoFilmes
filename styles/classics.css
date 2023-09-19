@@ -1,0 +1,45 @@
+.classics {
+    padding: 2em;
+}
+
+.classics__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--light-beige-color);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.swiper-slide img{
+    width: 100%;
+    padding: 1em;
+}
+
+.swiper-scrollbar {
+    background-color: var(--light-beige-color);
+}
+
+@media screen and (min-width: 768px) {
+    .classics {
+        padding: 3em;
+    }
+    
+    .classics__title {
+        font-size: 1.875rem;
+    }
+
+    .swiper {
+        width: 70vw;
+    }
+};
+
+@media screen and (min-width: 1024px) {
+    
+    .classics__title {
+        font-size: 2.25rem;
+    }
+
+    .swiper {
+        width: 40vw;
+    }
+}

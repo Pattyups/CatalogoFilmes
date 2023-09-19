@@ -1,0 +1,28 @@
+.footer {
+    background-color: var(--beige-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.footer__logo {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5em;
+}
+
+.footer__logo>span {
+    color: var(--gold-color);
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.socialmedia__image {
+    padding: 0.5em;
+}
